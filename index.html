@@ -9,25 +9,17 @@
 <head>
     <script src="node_modules/angular/angular.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/controllers/customerController.js"></script>
+    <script src="app/controllers/donorsController.js"></script>
+    <script src="app/controllers/donorIDController.js"></script>
+    <script src="app/angular-route.js"></script>
     <title>ng-crowdFunding interface</title>
 </head>
     
     
-<body ng-controller ="customerController">
-    <div ng-hide="isHidden">Name: <input type="text" ng-model="name" /> 
-    <br />
-    {{ name }}
-    </div>
-  
-     <br />
-    Hide: <input type="checkbox" ng-model="isHidden"/>
-    <br />
-    <button ng-click="name='Michelle'"> Change Name</button>
     
-    <ul>
-    <li ng-repeat=" person in people">{{ person.city }}</li>
-    </ul>
+    
+<body>
+    <div ng-view></div>
 
   
 </body>
