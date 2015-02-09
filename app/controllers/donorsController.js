@@ -6,14 +6,25 @@
         $scope.reverse = "false";
         $scope.customers = [];
         
-        function
+        function init(){
+            
+            $scope.donors = donorsFactory.getDonors();
+            
+        }
         
-    }
+        init();
+        $scope.doSort = Function(propName){
+        $scope.sortBy = propName;
+        $scope.reverse = !$scope.reverse;
+            
+        };
+        
+    };
     
     
     
 angular.module('donorInterfaceapp')
-.controller('donorIDController', ['$scope',donorFactory]);
+.controller('donorsController', ['$scope', donorsController]);
 
 
 }());
