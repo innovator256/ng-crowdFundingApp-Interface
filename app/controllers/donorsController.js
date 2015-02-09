@@ -1,15 +1,19 @@
 (function (){
 
     
-    var donorsController = function($scope){
-         $scope.donor = "kieth tha man";
+    var donorsController = function($scope, donorFactory){
+         $scope.sortBy = "address";
+        $scope.reverse = "false";
+        $scope.customers = [];
+        
+        function
         
     }
     
     
     
 angular.module('donorInterfaceapp')
-.controller('donorIDController', ['$scope', donorsController]);
+.controller('donorIDController', ['$scope',donorFactory]);
 
 
 }());
