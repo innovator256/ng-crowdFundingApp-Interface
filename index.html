@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="en" ng-app> <!--<![endif]-->
+<head>
+  
+  
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app/controllers/customerController.js"></script>
+    <title>My AngularJS App</title>
+</head>
+    
+    
+<body ng-controller ="customerController">
+    <div ng-hide="isHidden">Name: <input type="text" ng-model="name" /> 
+    <br />
+    {{ name }}
+    </div>
+  
+     <br />
+    Hide: <input type="checkbox" ng-model="isHidden"/>
+    <br />
+    <button ng-click="name='Michelle'"> Change Name</button>
+    
+    <ul>
+    <li ng-repeat=" person in people">{{ person.city }}</li>
+    </ul>
+
+  
+</body>
+</html>
