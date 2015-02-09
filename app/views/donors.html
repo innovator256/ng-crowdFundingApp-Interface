@@ -1,0 +1,25 @@
+<h2>Donors</h2>
+Filter : <input type="text" ng-model="donor.address" />
+<br /> <br />
+<table>
+<tr>
+    <th ng-click="doSort('adress')"> address</th>
+    <th ng-click="doSort('token')"> token</th>
+    <th ng-click="doSort('amount')"> amount</th>
+    <th ng-click="doSort('joined')"> joined</th>
+    <th>&nbsp;</th>
+
+</tr>
+    <tr ng-repeat="don in donors | filter:donoFilter | ">
+        <td>{{don.address}}</td>
+        <td>{{don.token}}</td>
+        <td>{{don.amount}}</td>
+        <td>{{don.joined | date}}</td>
+        <td><a href="#/donations/{{don.id}}">View Donation</a></td>
+    
+    </tr>
+
+</table>
+<br />
+
+<span> Total Donors : {{donors.length}}</span>

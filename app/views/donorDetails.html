@@ -1,9 +1,14 @@
-  <div ng-hide="isHidden">Name: <input type="text" ng-model="name" /> 
-    <br />
-    {{ name }}
-    </div>
-    <br />
-    <div ng-hide="isHidden">donor:
-    
-    {{ donor }}
-    </div>
+<h2>{{ donor.address }}</h2>
+
+<table>
+    <tr>
+        <th>Donor Name</th>
+        <th>Amount</th>
+    </tr>
+    <tr ng-repeat="donor in donors">
+        <td>{{donor.btc}}</td>
+        <td>{{donor.token}}</td>
+
+    </tr>
+
+</table>
