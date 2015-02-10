@@ -8,12 +8,12 @@
         
         function init(){
             
-            $scope.donors = donorsFactory.getDonors();
+            $scope.donors = donorFactory.getDonors();
             
         }
         
         init();
-        $scope.doSort = Function(propName){
+        $scope.doSort = function(propName){
         $scope.sortBy = propName;
         $scope.reverse = !$scope.reverse;
             
@@ -24,7 +24,7 @@
     
     
 angular.module('donorInterfaceapp')
-.controller('donorsController', ['$scope', donorsController]);
+.controller('donorsController', ['$scope','donorFactory', donorsController]);
 
 
 }());
