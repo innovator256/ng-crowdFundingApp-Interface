@@ -3,7 +3,7 @@
     //dummy test factory
     var donorFactory = function(){
         
-        $scope.donors = [
+       var donors = [
             
             {
                 id : 1,

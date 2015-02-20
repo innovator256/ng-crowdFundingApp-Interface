@@ -7,19 +7,21 @@
 <!--[if gt IE 8]><!--> 
 <html lang="en" ng-app="donorInterfaceapp"> <!--<![endif]-->
 <head>
-    <script src="node_modules/angular/angular.js"></script>
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/donorsController.js"></script>
     <script src="app/controllers/donorIDController.js"></script>
     <script src="app/services/donorFactory.js"></script>
-    <script src="app/angular-route.js"></script>
+    
+    
     <title>ng-crowdFunding interface</title>
 </head>
     
     
     
     
-<body>
+<body ng-controller ="donorsController">
     <div ng-view></div>
 
   

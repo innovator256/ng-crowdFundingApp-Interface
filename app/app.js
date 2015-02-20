@@ -6,11 +6,11 @@ app.config(function ($routeProvider){
            $routeProvider
            .when('/details/:donorID', {
                controller: 'donorIDController',
-               templateUrl:'views/donorDetails.html'
+               templateUrl:'app/views/donorDetails.html'
                 })
            .when('/', {
                controller: 'donorsController',
-               templateUrl:'views/donors.html'
+               templateUrl:'app/views/donors.html'
                 })
            .otherwise({redirectTo: '/'});
            
