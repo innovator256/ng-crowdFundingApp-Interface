@@ -1,6 +1,6 @@
 (function (){  
 angular.module('donorInterfaceapp')
-.controller('donorIDController', ['$scope','$routeParams', function($scope, $routeParams){
+.controller('donorIDController', ['$scope','$routeParams','donorFactory', function($scope, $routeParams, donorFactory){
     
     
     
@@ -9,20 +9,12 @@ angular.module('donorInterfaceapp')
         
         
         var donorID = $routeParams.donorID;
+        $scope.donor = null;
         
         function init(){
-            
-            //search the donors for the donorID
-            
-            for (var i =0, len=$scope.donors.length;i<len;i++){
-            if ($scope.donors[i].id === parseInt(donorID)){
-                $scope.detail = $scope.donors[i].detail;
-                break;
-                
-                }
-            
-            }
-            
+          
+            $scope.donor = donorFactory.getDonor(donorID);
+          
         };
         
         
@@ -32,7 +24,6 @@ angular.module('donorInterfaceapp')
     }
     
   
-
-
                                  ]);
+    
 }());

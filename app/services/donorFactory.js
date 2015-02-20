@@ -44,10 +44,20 @@ angular.module('donorInterfaceapp')
         ];
         
         var factory = {};
-        factory.getDonors = function(){
+        factory.getDonors = function(donorID){
             return donors;
             
         };
+        factory.getDonor = function(){
+          //search the donors for the donorID
+            
+            for (var i =0, len=donors.length;i<len;i++){
+            if (donors[i].id === parseInt(donorID)){
+                return donors[i];
+                }   
+            }
+            return {};
+        }
         
         return factory;
         

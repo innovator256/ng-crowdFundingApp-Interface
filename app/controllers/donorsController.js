@@ -8,7 +8,7 @@ angular.module('donorInterfaceapp')
    // var donorsController = 
         $scope.sortBy = "address";
         $scope.reverse = "false";
-        $scope.customers = [];
+        $scope.donors = [];
         
         function init(){
             
