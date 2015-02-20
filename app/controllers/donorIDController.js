@@ -13,7 +13,15 @@ angular.module('donorInterfaceapp')
         
         function init(){
           
-            $scope.donor = donorFactory.getDonor(donorID);
+              donorFactory.getDonor(donorID)
+        .success(function(donor){
+            $scope.donor = donor;
+            
+        })
+        .error(function(data, status, header, config) {
+            // handle error
+            
+        });
           
         };
         

@@ -1,0 +1,28 @@
+{
+  "name": "ng-crowdFundingApp-Interface",
+  "version": "0.0.1",
+  "description": "angular interface for bitcoin crowdfunding app",
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.3.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/innovator256/ng-crowdFundingApp-Interface.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "crowdfunding",
+    "tokens"
+  ],
+  "author": "Innovator256",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/innovator256/ng-crowdFundingApp-Interface/issues"
+  },
+  "homepage": "https://github.com/innovator256/ng-crowdFundingApp-Interface"
+}

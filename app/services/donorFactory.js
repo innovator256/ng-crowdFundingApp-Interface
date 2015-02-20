@@ -6,8 +6,8 @@ angular.module('donorInterfaceapp')
 .factory('donorFactory', [function(){
     
     //var donorFactory = 
-        
-       var donors = [
+     //only for local data testing, activate if server is disconnected   
+    /*   var donors = [
             
             {
                 id : 1,
@@ -41,15 +41,37 @@ angular.module('donorInterfaceapp')
                 amount:"10btc"
             }
         
-        ];
+        ]; */
         
         var factory = {};
-        factory.getDonors = function(donorID){
+    //server
+      factory.getDonors = function(){
+            return $http.get('/customers');
+            
+        };
+    
+    factory.getDonor = function(donorID){
+        return $http.get('/customers/' + donorID);
+    };
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   // localStorage
+    /*    factory.getDonors = function(donorID){
             return donors;
             
         };
         factory.getDonor = function(){
-          //search the donors for the donorID
+            
+            
+          //search the donors for the donorID locally
             
             for (var i =0, len=donors.length;i<len;i++){
             if (donors[i].id === parseInt(donorID)){
@@ -57,7 +79,7 @@ angular.module('donorInterfaceapp')
                 }   
             }
             return {};
-        }
+        }  */
         
         return factory;
         
