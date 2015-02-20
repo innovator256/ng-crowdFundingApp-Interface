@@ -1,7 +1,11 @@
 (function(){
     
     //dummy test factory
-    var donorFactory = function(){
+    
+angular.module('donorInterfaceapp')
+.factory('donorFactory', [function(){
+    
+    //var donorFactory = 
         
        var donors = [
             
@@ -47,9 +51,9 @@
         
         return factory;
         
-    };
+    }
+                         ]);
     
-    angular.module('donorInterfaceapp')
-.factory('donorFactory', [donorFactory]);
+
     
 }());

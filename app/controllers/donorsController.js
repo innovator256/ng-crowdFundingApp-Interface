@@ -1,8 +1,12 @@
 (function (){
 
+angular.module('donorInterfaceapp')
+.controller('donorsController', ['$scope','donorFactory', function($scope, donorFactory){
+
+
     
-    var donorsController = function($scope, donorFactory){
-         $scope.sortBy = "address";
+   // var donorsController = 
+        $scope.sortBy = "address";
         $scope.reverse = "false";
         $scope.customers = [];
         
@@ -19,12 +23,9 @@
             
         };
         
-    };
+    }
+                                ]);
     
     
     
-angular.module('donorInterfaceapp')
-.controller('donorsController', ['$scope','donorFactory', donorsController]);
-
-
 }());

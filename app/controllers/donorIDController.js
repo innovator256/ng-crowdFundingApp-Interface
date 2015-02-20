@@ -1,7 +1,12 @@
-(function (){
-
+(function (){  
+angular.module('donorInterfaceapp')
+.controller('donorIDController', ['$scope','$routeParams', function($scope, $routeParams){
     
-    var donorIDController = function($scope, $routeParams){
+    
+    
+   // var donorIDController = 
+        
+        
         
         var donorID = $routeParams.donorID;
         
@@ -18,7 +23,7 @@
             
             }
             
-        }
+        };
         
         
         
@@ -26,10 +31,8 @@
         
     }
     
-    
-    
-angular.module('donorInterfaceapp')
-.controller('donorIDController', ['$scope','$routeParams', donorIDController]);
+  
 
 
+                                 ]);
 }());
